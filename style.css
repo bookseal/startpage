@@ -1,0 +1,108 @@
+
+/* Dark mode */
+body.dark-mode {
+	background-color: #222; /* Dark background color */
+	color: #fff; /* Light text color */
+}
+
+/* Light mode */
+body.light-mode {
+	background-color: #fff; /* Light background color */
+	color: #333; /* Dark text color */
+}
+
+/* Small screens (e.g., mobile) */
+@media screen and (max-width: 768px) {
+	a {
+		font-size: 18px; /* Increase font size for better readability */
+		padding: 5px 10px; /* Add padding for touch-friendly links */
+	}
+}
+
+
+/* Adjust font sizes for specific elements */
+h1 {
+	font-size: 1.5rem;
+}
+
+p {
+	font-size: 1rem;
+	line-height: 1.4;
+}
+
+/* Apply dark mode styles to the body element */
+body {
+	background-color: #111; /* Dark background color */
+	color: #fff; /* White text color */
+	font-size: 16px; /* Set a base font size */
+}
+
+/* Style normal links */
+a {
+	color: #f0f0f0; /* Change the link color to blue */
+	text-decoration: none; /* Remove underlines from links */
+}
+
+/* Style links when hovered over */
+a:hover {
+	text-decoration: underline; /* Add underline on hover */
+}
+
+/* Style visited links */
+a:visited {
+	color: #551a8b; /* Change the color of visited links to purple */
+}
+
+/* Style form inputs in dark mode */
+input[type="text"] {
+	background-color: #333; /* Dark input background */
+	color: #fff; /* White text color */
+}
+
+/* Style table borders in dark mode */
+table {
+	border: 1px solid #444; /* Dark border color */
+}
+
+/* Customize other elements as needed */
+/* Style the submit button */
+#submit {
+	background-color: #007bff; /* Button background color */
+	color: #fff; /* Text color */
+	padding: 10px 20px; /* Padding for the button */
+	border: none; /* Remove the default button border */
+	border-radius: 5px; /* Rounded corners */
+	cursor: pointer; /* Cursor style on hover */
+	transition: background-color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Hover effect - change background color */
+#submit:hover {
+	background-color: #0056b3; /* Darker color on hover */
+}
+
+/* Optional: Add more styling for better aesthetics */
+/* Add a box shadow to the button */
+#submit {
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Center the button text */
+#submit {
+	text-align: center;
+}
+
+/* Remove button outline on focus (for accessibility) */
+#submit:focus {
+	outline: none;
+}
+
+/* Optional: Add a hover animation */
+#submit {
+	transition: transform 0.2s ease;
+}
+
+/* Hover effect - scale the button slightly on hover */
+#submit:hover {
+	transform: scale(1.05);
+}
