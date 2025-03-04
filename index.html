@@ -1,94 +1,73 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Search Gichanlee</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Start Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white p-8">
 
-    <header>
+    <div class="max-w-2xl mx-auto">
+        <!-- Naver Search -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-blue-400">Naver | Cafe</h2>
+            <div class="mt-2 flex items-center">
+                <input type="text" placeholder="검색" class="w-full p-2 rounded bg-gray-800 text-white border border-gray-600">
+                <button class="ml-2 bg-blue-500 px-4 py-2 rounded text-white">검색</button>
+            </div>
+            <div class="mt-2 flex space-x-4 text-white">
+                <label><input type="radio" name="naver" class="mr-1"> m</label>
+                <label><input type="radio" name="naver" class="mr-1"> w</label>
+                <label><input type="radio" name="naver" class="mr-1"> d</label>
+                <label><input type="radio" name="naver" checked class="mr-1"> Total</label>
+            </div>
+        </section>
 
-    </header>
+        <!-- YouTube Search -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-red-500">YouTube</h2>
+            <div class="mt-2 flex items-center">
+                <input type="text" placeholder="검색" class="w-full p-2 rounded bg-gray-800 text-white border border-gray-600">
+                <button class="ml-2 bg-blue-500 px-4 py-2 rounded text-white">검색</button>
+            </div>
+            <div class="mt-4">
+                <h3 class="text-lg font-semibold">YouTube Playlists</h3>
+                <ul class="mt-2 space-y-2">
+                    <li><a href="https://www.youtube.com/playlist?list=PL-w2gH2d0U1s1WmlMvH54yNL9RgueCN-F" target="_blank" class="text-blue-400 hover:underline">키친영상</a></li>
+                    <li><a href="https://www.youtube.com/playlist?list=PL-w2gH2d0U1sK6VswUDYHsPHMcX3jOxkx" target="_blank" class="text-blue-400 hover:underline">기찬</a></li>
+                    <li><a href="https://www.youtube.com/playlist?list=WL" target="_blank" class="text-blue-400 hover:underline">와치레이터</a></li>
+                </ul>
+            </div>
+        </section>
 
-    <nav>
-      <ul>
-        <li><a href="https://naver.com">Naver</a> | <a href="https://m.cafe.naver.com">Cafe</a></li>
-        <li>
-          <form action="https://search.naver.com/search.naver" method="GET">
-            <input type="hidden" name="ie" value="UTF-8">
-            <input id="naver" name="query" type="text" placeholder="검색">
-            <input id="submit" name="submit" type="submit" value="검색">
-          </form>
-        </li>
-        <li>
-          <form>
-            <input type="radio" id="daterange-1month" name="date_option" value="4">
-            <label for="daterange-1month">m</label>
-            <input type="radio" id="daterange-1week" name="date_option" value="3">
-            <label for="daterange-1week">w</label>
-            <input type="radio" id="daterange-1day" name="date_option" value="2">
-            <label for="daterange-1day">d</label>
-            <input type="radio" id="daterange-total" name="date_option" value="0" checked>
-            <label for="daterange-total">Total</label>
-          </form>
-        </li>
-      </ul>
-    </nav>
+        <!-- Online Communities -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-white">Online Communities</h2>
+            <ul class="mt-2 space-y-2">
+                <li><a href="#" class="text-purple-400 hover:underline">Clien</a></li>
+                <li><a href="#" class="text-purple-400 hover:underline">Ppomppu</a></li>
+            </ul>
+            <div class="mt-2 flex items-center">
+                <input type="text" placeholder="검색" class="w-full p-2 rounded bg-gray-800 text-white border border-gray-600">
+                <button class="ml-2 bg-blue-500 px-4 py-2 rounded text-white">검색</button>
+            </div>
+        </section>
 
-    <section>
-      <h2>YouTube</h2>
-      <a href="https://youtube.com"><img src="https://lh3.googleusercontent.com/NoH5jn0ZNLP0uUMKPOhHBqDPGaseCtaQfBhxExSNf6L_zXB3r7spA4AVNXkLESSpVUwwvZ507yGxM_3dk7havspHQekYDwKk1v6XjA" alt="YouTube" width="50px"></a>
-      <a href="https://www.youtube.com/playlist?list=WL">Watch Later</a>
-      <form action="https://www.youtube.com/results" method="GET">
-        <input type="hidden" name="ie" value="UTF-8">
-        <input name="search_query" type="text" placeholder="검색">
-        <input id="submit" name="submit" type="submit" value="검색">
-      </form>
-    </section>
+        <!-- Naver Shopping -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-white">Naver Shopping</h2>
+            <div class="mt-2 flex items-center">
+                <input type="text" placeholder="검색" class="w-full p-2 rounded bg-gray-800 text-white border border-gray-600">
+                <button class="ml-2 bg-blue-500 px-4 py-2 rounded text-white">검색</button>
+            </div>
+            <div class="mt-2 flex space-x-4 text-white">
+                <label><input type="radio" name="shop" checked class="mr-1"> 네이버쇼핑랭킹순</label>
+                <label><input type="radio" name="shop" class="mr-1"> 리뷰많은순</label>
+            </div>
+        </section>
 
-    <hr>
+    </div>
 
-    <section>
-      <h2>Online Communities</h2>
-      <ul>
-        <li><a href="https://clien.net">Clien</a></li>
-        <li><a href="https://ppomppu.co.kr">Ppomppu</a>
-          <form action="https://www.ppomppu.co.kr/search_bbs.php" method="GET">
-            <input type="hidden" name="ie" value="UTF-8">
-            <input name="keyword" type="text" placeholder="검색">
-            <input id="submit" name="submit" type="submit" value="검색">
-          </form>
-        </li>
-      </ul>
-    </section>
-
-    <hr>
-
-    <section>
-      <h2>Naver Shopping</h2>
-      <a href="https://order.pay.naver.com/home?tabMenu=SHOPPING">Naver Shop</a>
-      <form action="https://search.shopping.naver.com/search/all.nhn" method="GET">
-        <input type="text" name="query" placeholder="검색">
-        <input id="submit" type="submit" value="검색">
-      </form>
-      <input type="radio" id="sortedByRel" name="sort" value="rel" checked>
-      <label for="sortedByRel">네이버쇼핑랭킹순</label>
-      <input type="radio" id="sortedByReview" name="sort" value="review">
-      <label for="sortedByReview">리뷰많은순</label>
-    </section>
-
-    <hr>
-
-    <section>
-      <h2>Financial</h2>
-      <a href="https://docs.google.com/spreadsheets/d/1DASFX5NqOJYd7OmPQUSPnjU00JsyA9gD-nqmYd914Co/edit#gid=555576835">재무</a>
-    </section>
-
-    <footer>
-      <script src="script.js"></script>
-    </footer>
-
-  </body>
+</body>
 </html>
