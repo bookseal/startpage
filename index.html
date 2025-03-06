@@ -28,9 +28,9 @@
             <div class="mt-4">
                 <h3 class="text-lg font-semibold">YouTube Playlists</h3>
                 <ul class="mt-2 space-y-2">
-                    <li><a href="https://www.youtube.com/playlist?list=PL-w2gH2d0U1s1WmlMvH54yNL9RgueCN-F" target="_blank" class="text-blue-400 hover:underline">키친영상</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PL-w2gH2d0U1sK6VswUDYHsPHMcX3jOxkx" target="_blank" class="text-blue-400 hover:underline">기찬</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=WL" target="_blank" class="text-blue-400 hover:underline">와치레이터</a></li>
+                    <li><a href="https://www.youtube.com/playlist?list=PL-w2gH2d0U1s1WmlMvH54yNL9RgueCN-F" class="text-blue-400 hover:underline">키친영상</a></li>
+                    <li><a href="https://www.youtube.com/playlist?list=PL-w2gH2d0U1sK6VswUDYHsPHMcX3jOxkx" class="text-blue-400 hover:underline">기찬</a></li>
+                    <li><a href="https://www.youtube.com/playlist?list=WL" class="text-blue-400 hover:underline">와치레이터</a></li>
                 </ul>
             </div>
         </section>
@@ -39,9 +39,9 @@
         <section class="mb-8">
             <h2 class="text-2xl font-bold text-white">Online Communities</h2>
             <ul class="mt-2 space-y-2">
-                <li><a href="#" class="text-purple-400 hover:underline">Clien</a></li>
-                <li><a href="#" class="text-purple-400 hover:underline">Ppomppu</a></li>
-                <li><a href="https://www.ppomppu.co.kr/zboard/zboard.php?id=phone" target="_blank" class="text-blue-400 hover:underline">휴대폰포럼</a></li>
+                <li><a href="https://www.clien.net/" class="text-purple-400 hover:underline">Clien</a></li>
+                <li><a href="https://www.ppomppu.co.kr/" class="text-purple-400 hover:underline">Ppomppu</a></li>
+                <li><a href="https://www.ppomppu.co.kr/zboard/zboard.php?id=phone" class="text-blue-400 hover:underline">휴대폰포럼</a></li>
             </ul>
             <div class="mt-2 flex items-center">
                 <input id="communitySearch" type="text" placeholder="검색" class="w-full p-2 rounded bg-gray-800 text-white border border-gray-600">
@@ -63,28 +63,28 @@
         function searchNaver() {
             let query = document.getElementById("naverSearch").value;
             if (query) {
-                window.open(`https://search.naver.com/search.naver?query=${query}`, "_blank");
+                window.location.href = `https://search.naver.com/search.naver?query=${query}`;
             }
         }
 
         function searchYouTube() {
             let query = document.getElementById("youtubeSearch").value;
             if (query) {
-                window.open(`https://www.youtube.com/results?search_query=${query}`, "_blank");
+                window.location.href = `https://www.youtube.com/results?search_query=${query}`;
             }
         }
 
         function searchCommunity() {
             let query = document.getElementById("communitySearch").value;
             if (query) {
-                window.open(`https://www.clien.net/service/search?q=${query}`, "_blank");
+                window.location.href = `https://www.clien.net/service/search?q=${query}`;
             }
         }
 
         function searchShopping() {
             let query = document.getElementById("shoppingSearch").value;
             if (query) {
-                window.open(`https://search.shopping.naver.com/search/all?query=${query}`, "_blank");
+                window.location.href = `https://search.shopping.naver.com/search/all?query=${query}`;
             }
         }
     </script>
