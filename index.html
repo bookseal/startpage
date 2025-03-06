@@ -13,7 +13,7 @@
         <section class="mb-8">
             <h2 class="text-2xl font-bold text-blue-400">Naver</h2>
             <div class="mt-2 flex items-center">
-                <input id="naverSearch" type="text" placeholder="검색" class="w-full p-2 rounded bg-gray-800 text-white border border-gray-600">
+                <input id="naverSearch" type="text" placeholder="검색" class="w-full p-2 rounded bg-gray-800 text-white border border-gray-600" onkeypress="handleKeyPress(event, searchNaver)">
                 <button onclick="searchNaver()" class="ml-2 bg-blue-500 px-4 py-2 rounded text-white">검색</button>
             </div>
         </section>
@@ -22,7 +22,7 @@
         <section class="mb-8">
             <h2 class="text-2xl font-bold text-red-500">YouTube</h2>
             <div class="mt-2 flex items-center">
-                <input id="youtubeSearch" type="text" placeholder="검색" class="w-full p-2 rounded bg-gray-800 text-white border border-gray-600">
+                <input id="youtubeSearch" type="text" placeholder="검색" class="w-full p-2 rounded bg-gray-800 text-white border border-gray-600" onkeypress="handleKeyPress(event, searchYouTube)">
                 <button onclick="searchYouTube()" class="ml-2 bg-blue-500 px-4 py-2 rounded text-white">검색</button>
             </div>
             <div class="mt-4">
@@ -40,26 +40,32 @@
             <h2 class="text-2xl font-bold text-white">Online Communities</h2>
             <ul class="mt-2 space-y-2">
                 <li><a href="https://www.clien.net/" class="text-purple-400 hover:underline">Clien</a></li>
+                <div class="mt-2 flex items-center">
+                    <input id="communitySearch" type="text" placeholder="클리앙 검색" class="w-full p-2 rounded bg-gray-800 text-white border border-gray-600" onkeypress="handleKeyPress(event, searchCommunity)">
+                    <button onclick="searchCommunity()" class="ml-2 bg-blue-500 px-4 py-2 rounded text-white">검색</button>
+                </div>
                 <li><a href="https://www.ppomppu.co.kr/" class="text-purple-400 hover:underline">Ppomppu</a></li>
                 <li><a href="https://www.ppomppu.co.kr/zboard/zboard.php?id=phone" class="text-blue-400 hover:underline">휴대폰포럼</a></li>
             </ul>
-            <div class="mt-2 flex items-center">
-                <input id="communitySearch" type="text" placeholder="검색" class="w-full p-2 rounded bg-gray-800 text-white border border-gray-600">
-                <button onclick="searchCommunity()" class="ml-2 bg-blue-500 px-4 py-2 rounded text-white">검색</button>
-            </div>
         </section>
 
         <!-- Naver Shopping -->
         <section class="mb-8">
             <h2 class="text-2xl font-bold text-white">Naver Shopping</h2>
             <div class="mt-2 flex items-center">
-                <input id="shoppingSearch" type="text" placeholder="검색" class="w-full p-2 rounded bg-gray-800 text-white border border-gray-600">
+                <input id="shoppingSearch" type="text" placeholder="검색" class="w-full p-2 rounded bg-gray-800 text-white border border-gray-600" onkeypress="handleKeyPress(event, searchShopping)">
                 <button onclick="searchShopping()" class="ml-2 bg-blue-500 px-4 py-2 rounded text-white">검색</button>
             </div>
         </section>
     </div>
 
     <script>
+        function handleKeyPress(event, searchFunction) {
+            if (event.key === "Enter") {
+                searchFunction();
+            }
+        }
+
         function searchNaver() {
             let query = document.getElementById("naverSearch").value;
             if (query) {
