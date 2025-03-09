@@ -29,14 +29,6 @@
                 <input id="youtubeSearch" type="text" placeholder="검색" class="w-full p-2 rounded bg-gray-800 text-white border border-gray-600" onkeypress="handleKeyPress(event, 'searchYouTube')">
                 <button onclick="searchYouTube()" class="ml-2 bg-blue-500 px-4 py-2 rounded text-white">검색</button>
             </div>
-            <div class="mt-4">
-                <h3 class="text-lg font-semibold">YouTube Playlists</h3>
-                <ul class="mt-2 space-y-2">
-                    <li><a href="https://www.youtube.com/playlist?list=PL-w2gH2d0U1s1WmlMvH54yNL9RgueCN-F" class="text-blue-400 hover:underline">키친영상</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PL-w2gH2d0U1sK6VswUDYHsPHMcX3jOxkx" class="text-blue-400 hover:underline">기찬</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=WL" class="text-blue-400 hover:underline">와치레이터</a></li>
-                </ul>
-            </div>
         </section>
 
         <!-- Online Communities -->
@@ -52,6 +44,19 @@
                 <button onclick="searchCommunity()" class="ml-2 bg-blue-500 px-4 py-2 rounded text-white">검색</button>
             </div>
         </section>
+
+        <!-- LLM Services -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-green-400">LLM Services</h2>
+            <ul class="mt-2 space-y-2">
+                <li><a href="https://chat.openai.com/" class="text-blue-400 hover:underline">ChatGPT</a></li>
+                <li><a href="https://claude.ai/chat" class="text-yellow-400 hover:underline">Claude</a></li>
+                <li><a href="https://gemini.google.com/app" class="text-red-400 hover:underline">Gemini</a></li>
+                <li><a href="https://www.perplexity.ai/" class="text-purple-400 hover:underline">Perplexity</a></li>
+                <li><a href="https://huggingface.co/chat/" class="text-pink-400 hover:underline">Hugging Face Chat</a></li>
+            </ul>
+        </section>
+
     </div>
 
     <script>
